@@ -8,7 +8,7 @@ get_average_duration(songs): Ortalama şarkı sürsini hesaplar. <br>
 print_playlist(songs): Playlisti düzenli şekilde yazdırır. <br>
 get_longest_song(songs): Playlistteki en uzun şarkıyı yazdırır. <br>
 filter_by_artist(songs, sanatci_adi): Playlistteki sanatçının şarkılarını döndürür. <br>
-sort_by_plays(songs): Şarkıları dinlenmelerine göre sıralar <br>
+sort_by_plays(songs): Şarkıları dinlenmelerine göre sıralar. <br>
 main(): En az 5 şarkı oluşturur ve tüm methodları çalıştırır. <br>
 
 # Çalıştırma Bilgisi: <br>
