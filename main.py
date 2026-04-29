@@ -1,25 +1,25 @@
 sarkilar = []
 
-def get_total_duration(songs):
+def get_total_duration(songs): # Tüm şarkıların toplam süresini hesaplar.
     toplam = 0
     for sarki in songs:
         toplam = toplam + sarki["sure"]
     return toplam
 
 
-def get_most_played_song(songs):
+def get_most_played_song(songs): # En çok dinlenen şarkıyı bulur.
     en_cok =songs[0]
     for sarki in songs:
         if sarki["dinlenme"] > en_cok["dinlenme"]:
             en_cok = sarki
     return en_cok
 
-def get_average_duration(songs):
+def get_average_duration(songs): # Ortalama şarkı sürsini hesaplar.
     toplam = get_total_duration(songs)
     ortalama = toplam / len(songs)
     return ortalama
 
-def print_playlist(songs):
+def print_playlist(songs): # Playlisti düzenli şekilde yazdırır.
     print("-----Playlist-----")
     for i in range(len(songs)):
         sarki = songs[i]
@@ -28,14 +28,14 @@ def print_playlist(songs):
         print("-----------------")
 
 
-def get_longest_song(songs):
+def get_longest_song(songs): # Playlistteki en uzun şarkıyı yazdırır.
     en_uzun = songs[0]
     for sarki in songs:
         if sarki["sure"] > en_uzun["sure"]:
             en_uzun = sarki
     return en_uzun
 
-def filter_by_artist(songs, sanatci_adi):
+def filter_by_artist(songs, sanatci_adi): # Playlistteki sanatçının şarkılarını döndürür.
     sonuc =[]
     for sarki in songs:
         if sarki["sanatci"] == sanatci_adi:
@@ -43,13 +43,13 @@ def filter_by_artist(songs, sanatci_adi):
     return sonuc
 
 
-def sort_by_plays(songs):
+def sort_by_plays(songs): # Şarkıları dinlenmelerine göre sıralar.
     sirali = sorted(songs, key = lambda x: x["dinlenme"], reverse = True)
 
     return sirali
 
 
-def main():
+def main(): # En az 5 şarkı oluşturur ve tüm methodları çalıştırır.
 
     sarkilar.append({"sarki_adi": "Mevsimler Geçerken", "sanatci": "Umut Kaya" ,"sure": 319, "dinlenme": 381000})
     sarkilar.append({"sarki_adi": "Rain Dance", "sanatci": "Dave", "sure": 341 , "dinlenme": 133778733})
